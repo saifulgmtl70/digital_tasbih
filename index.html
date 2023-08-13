@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "night">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbih</title>
+    <link href="src/cdn.jsdelivr.net_npm_daisyui@3.3.1_dist_full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="src/all.min.css">
+    <script src="src/cdn.tailwindcss.com_3.3.3"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Noto+Sans+Bengali:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <style>
+        main{
+            background: url(/tasbih-bg.jpg);
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-size: cover;
+            padding: 100px 8%;
+            position: relative;
+            z-index: 1;
+        }
+        main::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #0c4156;
+            z-index: -1;
+            opacity: .7;
+           
+        }
+        .font-caprasimo{
+            font-family: 'Caprasimo', cursive;
+        }
+        .font-nato{
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <main class="opacity-80 h-auto">
+        <div class="title-container mb-20">
+            <h1
+                class="mb-28 -mt-14 text-3xl text-center  font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                <span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r to-orange-400 from-orange-800">Digital Tasbih
+                </span>
+            </h1>
+        </div>
+
+
+        <section class="container grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mt-5 lg:mt-20 lg:grid-cols-3 gap-3 lg:gap-5 max-w-7xl">
+
+            <!-- ============= সুবহানাল্লাহ শুরু  =============-->
+            <div
+                class="relative flex w-full h-full text-center flex-col rounded-md bg-white bg-clip-border text-blue-950 shadow-lg">
+                <div class="p-6">
+                    <h5 class="mb-2 block font-caprasimo text-2xl font-bold leading-snug text-blue-gray-900 antialiased tracking-widest"> সুবহানাল্লাহ </h5>
+                    <p id="subhanAllahDisplay" class="block text-4xl font-sans font-light leading-relaxed text-inherit antialiased"> 0 </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <button id="subhanAllahIncrimentBtn"
+                        class="font-extrabold select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button" data-ripple-light="true">
+                        <i class="fa-solid fa-plus text-lg"></i>
+                    </button>
+                    <button id="subhanAllahDecrimentBtn"
+                        class="ms-2 select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button" data-ripple-light="true">
+                        <i class="fa-solid fa-minus text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ============= সুবহানাল্লাহ শেষ ============= -->
+
+
+
+            <!-- ============= আলহামদুলিল্লাহ শুরু  =============-->
+            <div
+                class="relative flex w-full h-full text-center flex-col rounded-md bg-white bg-clip-border text-blue-950 shadow-lg">
+                <div class="p-6">
+                    <h5 class="mb-2 block font-caprasimo text-2xl font-bold leading-snug text-blue-gray-900 antialiased tracking-widest"> আলহামদুলিল্লাহ </h5>
+                    <p id="alhamdulillahDisplay" class="block text-4xl font-sans font-light leading-relaxed text-inherit antialiased"> 0 </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <button id="alhamdulillahIncrimentBtn"
+                        class="font-extrabold select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button" data-ripple-light="true">
+                        <i class="fa-solid fa-plus text-lg"></i>
+                    </button>
+                    <button id="alhamdulillahDecrimentBtn"
+                        class="ms-2 select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button" data-ripple-light="true">
+                        <i class="fa-solid fa-minus text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ============= আলহামদুলিল্লাহ শেষ ============= -->
+
+
+
+            <!-- ============= আল্লাহু আকবর শুরু  =============-->
+            <div
+                class="relative flex w-full h-full text-center flex-col rounded-md bg-white bg-clip-border text-blue-950 shadow-lg">
+                <div class="p-6">
+                    <h5 class="mb-2 block font-caprasimo text-2xl font-bold leading-snug text-blue-gray-900 antialiased tracking-widest"> আল্লাহু আকবর </h5>
+                    <p id="allahAkberDisplay" class="block text-4xl font-sans font-light leading-relaxed text-inherit antialiased"> 0 </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <button id="allahAkberIncrimentBtn"
+                        class="font-extrabold select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button" data-ripple-light="true">
+                        <i class="fa-solid fa-plus text-lg"></i>
+                    </button>
+                    <button id="allahAkberDecrimentBtn"
+                        class="ms-2 select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button" data-ripple-light="true">
+                        <i class="fa-solid fa-minus text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- =============  আল্লাহু আকবর শেষ ============= -->
+
+
+
+            <!-- ============= লা ইলাহা ইল্লাহ শুরু  =============-->
+            <div
+             class="relative flex w-full h-full text-center flex-col rounded-md bg-white bg-clip-border text-blue-950 shadow-lg">
+             <div class="p-6">
+                 <h5 class="mb-2 block font-caprasimo text-2xl font-bold leading-snug text-blue-gray-900 antialiased tracking-widest"> লা ইলাহা ইল্লাহ </h5>
+                 <p id="subhanAllahDisplay" class="block text-4xl font-sans font-light leading-relaxed text-inherit antialiased"> 0 </p>
+             </div>
+             <div class="p-6 pt-0">
+                 <button id="subhanAllahIncrimentBtn"
+                     class="font-extrabold select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                     type="button" data-ripple-light="true">
+                     <i class="fa-solid fa-plus text-lg"></i>
+                 </button>
+                 <button id="subhanAllahDecrimentBtn"
+                     class="ms-2 select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                     type="button" data-ripple-light="true">
+                     <i class="fa-solid fa-minus text-lg"></i>
+                 </button>
+             </div>
+            </div>
+            <!-- =============  লা ইলাহা ইল্লাহ শেষ ============= -->
+
+
+            <!-- ============= আস্তাগফিরুল্লাহ শুরু  =============-->
+            <div
+              class="relative flex w-full h-full text-center flex-col rounded-md bg-white bg-clip-border text-blue-950 shadow-lg">
+              <div class="p-6">
+                  <h5 class="mb-2 block font-caprasimo text-2xl font-bold leading-snug text-blue-gray-900 antialiased tracking-widest"> আস্তাগফিরুল্লাহ </h5>
+                  <p id="subhanAllahDisplay" class="block text-4xl font-sans font-light leading-relaxed text-inherit antialiased"> 0 </p>
+              </div>
+              <div class="p-6 pt-0">
+                  <button id="subhanAllahIncrimentBtn"
+                      class="font-extrabold select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                      type="button" data-ripple-light="true">
+                      <i class="fa-solid fa-plus text-lg"></i>
+                  </button>
+                  <button id="subhanAllahDecrimentBtn"
+                      class="ms-2 select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                      type="button" data-ripple-light="true">
+                      <i class="fa-solid fa-minus text-lg"></i>
+                  </button>
+              </div>
+            </div>
+            <!-- =============  আস্তাগফিরুল্লাহ শেষ ============= -->
+
+
+               <!-- ============= সাল্লাল্লাহু আলাইহী ওয়াসাল্লাম শুরু  =============-->
+               <div
+               class="relative flex w-full h-full text-center flex-col rounded-md bg-white bg-clip-border text-blue-950 shadow-lg">
+               <div class="p-6">
+                   <h5 class="mb-2 block font-caprasimo text-2xl font-bold leading-snug text-blue-gray-900 antialiased tracking-widest"> সাল্লাল্লাহু আলাইহী ওয়াসাল্লাম </h5>
+                   <p id="subhanAllahDisplay" class="block text-4xl font-sans font-light leading-relaxed text-inherit antialiased"> 0 </p>
+               </div>
+               <div class="p-6 pt-0">
+                   <button id="subhanAllahIncrimentBtn"
+                       class="font-extrabold select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                       type="button" data-ripple-light="true">
+                       <i class="fa-solid fa-plus text-lg"></i>
+                   </button>
+                   <button id="subhanAllahDecrimentBtn"
+                       class="ms-2 select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                       type="button" data-ripple-light="true">
+                       <i class="fa-solid fa-minus text-lg"></i>
+                   </button>
+               </div>
+             </div>
+             <!-- =============  সাল্লাল্লাহু আলাইহী ওয়াসাল্লাম শেষ ============= -->
+        </section>
+
+        <!-- ResetContainer Start -->
+        <div class="resetContainer lg:mt-10 mt-5 flex justify-center">
+            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-white text-sm tracking-widest bg-red-600 hover:bg-red-700 border-0" id="resetBtn">Reset All Tasbih</button>
+        </div>
+          <!-- ResetContainer End -->
+
+    </main>
+
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
